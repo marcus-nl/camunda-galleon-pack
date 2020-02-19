@@ -21,7 +21,7 @@
 
     <resources>
         <!-- TODO Use the actual name of the subsystem artifact here -->
-        <artifact name="${org.wildfly.extras.galleon-feature-pack-template:template-dependency}"/>
+        <artifact name="${com.github.marcus-nl.camunda-galleon:template-dependency}"/>
     </resources>
 
     <dependencies>

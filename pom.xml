@@ -21,7 +21,7 @@
         <artifactId>jboss-parent</artifactId>
         <version>35</version>
     </parent>
-    <groupId>org.wildfly.extras.galleon-feature-pack-template</groupId>
+    <groupId>com.github.marcus-nl.camunda-galleon</groupId>
     <artifactId>template-parent</artifactId>
     <version>1.0.0.Alpha-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -169,7 +169,7 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>template-galleon-pack</artifactId>
+                <artifactId>camunda-galleon-pack</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <exclusions>
@@ -181,7 +181,7 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>template-galleon-pack</artifactId>
+                <artifactId>camunda-galleon-pack</artifactId>
                 <version>${project.version}</version>
                 <type>zip</type>
                 <exclusions>

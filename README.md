@@ -242,9 +242,9 @@ WildFly feature pack. We will add it in the next step.
 #### Install our layer
 Next we want to install our layer. We do this by running:
 ```
-~/Downloads/galleon-4.2.3.Final/bin/galleon.sh install org.wildfly.extras.galleon-feature-pack-template:template-galleon-pack:1.0.0.Alpha-SNAPSHOT --layers=template-layer --dir=wildfly
+~/Downloads/galleon-4.2.3.Final/bin/galleon.sh install com.github.marcus-nl.camunda-galleon:camunda-galleon-pack:1.0.0.Alpha-SNAPSHOT --layers=template-layer --dir=wildfly
 ``` 
-`org.wildfly.extras.galleon-feature-pack-template:template-galleon-pack:1.0.0.Alpha-SNAPSHOT`
+`com.github.marcus-nl.camunda-galleon:camunda-galleon-pack:1.0.0.Alpha-SNAPSHOT`
 is the Maven GAV of the Galleon feature pack (i.e. what we have in 
 [`galleon-pack/pom.xml`](https://github.com/wildfly/wildfly-galleon-pack-template/blob/master/galleon-pack/pom.xml)).
 
@@ -305,5 +305,5 @@ To debug failures in the provisioning of the server of the creation of the Galle
 good to run `mvn install -X` which will provide more logging.
 
 If the above doesn't shed any light on your problems, it can also be good to look at the 
-`galleon-pack/target/layout/org.wildfly.extras.galleon-feature-pack-template/template-galleon-pack/<version>/`
+`galleon-pack/target/layout/com.github.marcus-nl.camunda-galleon/camunda-galleon-pack/<version>/`
 directory to see if everything you expected there.
