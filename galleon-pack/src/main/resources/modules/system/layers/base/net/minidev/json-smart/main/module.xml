@@ -1,0 +1,9 @@
+<module xmlns="urn:jboss:module:1.9" name="net.minidev.json-smart">
+  <resources>
+    <artifact name="${net.minidev:json-smart}"/>
+  </resources>
+
+  <dependencies>
+    <module name="net.minidev.accessors-smart" />
+  </dependencies>
+</module>

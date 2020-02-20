@@ -1,0 +1,15 @@
+<module xmlns="urn:jboss:module:1.9" name="org.camunda.connect.camunda-connect-http-client">
+  <resources>
+    <artifact name="${org.camunda.connect:camunda-connect-http-client}"/>
+  </resources>
+
+  <dependencies>
+    <module name="javax.api"/>
+    <module name="org.camunda.commons.camunda-commons-logging" />
+    <module name="org.camunda.commons.camunda-commons-utils" />
+
+    <module name="org.camunda.connect.camunda-connect-core" />
+
+    <module name="org.apache.httpcomponents.httpclient" />
+  </dependencies>
+</module>

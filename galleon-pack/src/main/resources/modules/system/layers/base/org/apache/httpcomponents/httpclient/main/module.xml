@@ -1,0 +1,16 @@
+<module xmlns="urn:jboss:module:1.9" name="org.apache.httpcomponents.httpclient">
+  <resources>
+    <artifact name="${org.apache.httpcomponents:httpclient}"/>
+  </resources>
+
+  <dependencies>
+
+    <module name="javax.api" />
+
+    <module name="commons-logging.commons-logging" />
+    <module name="commons-codec.commons-codec" />
+
+    <module name="org.apache.httpcomponents.httpcore" export="true" />
+
+  </dependencies>
+</module>

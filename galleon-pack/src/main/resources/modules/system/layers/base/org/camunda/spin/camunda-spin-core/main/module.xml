@@ -1,0 +1,12 @@
+<module xmlns="urn:jboss:module:1.9" name="org.camunda.spin.camunda-spin-core">
+  <resources>
+    <artifact name="${org.camunda.spin:camunda-spin-core}"/>
+  </resources>
+
+  <dependencies>
+    <module name="javax.api"/>
+    <module name="org.camunda.commons.camunda-commons-logging" />
+    <module name="org.camunda.commons.camunda-commons-utils" />
+    <module name="org.camunda.commons.camunda-commons-typed-values" />
+  </dependencies>
+</module>

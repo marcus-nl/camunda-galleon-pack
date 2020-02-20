@@ -1,0 +1,11 @@
+<module xmlns="urn:jboss:module:1.9" name="com.fasterxml.uuid.java-uuid-generator">
+  <resources>
+    <artifact name="${com.fasterxml.uuid:java-uuid-generator}"/>
+  </resources>
+
+  <dependencies>
+    
+    <module name="javax.api" />
+    
+  </dependencies>
+</module>

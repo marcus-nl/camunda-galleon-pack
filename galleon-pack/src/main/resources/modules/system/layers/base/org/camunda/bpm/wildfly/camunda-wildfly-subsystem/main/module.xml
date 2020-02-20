@@ -34,8 +34,10 @@
     
     <module name="org.camunda.bpm.camunda-engine" />
     <module name="org.camunda.bpm.identity.camunda-identity-ldap" />
+    
+    <!-- TODO shouldn't these plugins be optional? -->
     <module name="org.camunda.bpm.camunda-engine-plugin-spin" services="import" />
-    <module name="org.camunda.bpm.camunda-engine-plugin-connect" />
+    <module name="org.camunda.bpm.camunda-engine-plugin-connect"/>
 
     <module name="org.camunda.bpm.camunda-engine-plugins" optional="true" />
 
