@@ -43,6 +43,17 @@ TODO: Rename this file to something which matches our Galleon feature pack name
                 </license>
             </licenses>
         </dependency>
+        <dependency>
+            <groupId>org.camunda.bpm.wildfly</groupId>
+            <artifactId>camunda-wildfly-subsystem</artifactId>
+            <licenses>
+                <license>
+                    <name>Apache License 2.0</name>
+                    <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+                    <distribution>repo</distribution>
+                </license>
+            </licenses>
+        </dependency>
 
 
 
