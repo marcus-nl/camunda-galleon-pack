@@ -106,6 +106,7 @@
                                         <!-- Layers from this FP  -->
                                         <!-- TODO - rename to what you have called your layer -->
                                         <layer>template-layer</layer>
+                                        <layer>camunda-layer</layer>
                                     </layers>
                                 </config>
                             </configurations>

@@ -40,9 +40,11 @@
         <layers>
             <!-- The base server -->
             <include name="cloud-profile"/>
+            <include name="core-tools"/>
 
             <!-- Our layer(s) -->
             <include name="template-layer"/>
+            <include name="camunda-layer"/>
         </layers>
     </config>
     <options>
