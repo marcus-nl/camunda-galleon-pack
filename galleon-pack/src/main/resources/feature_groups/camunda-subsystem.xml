@@ -16,35 +16,51 @@
   -->
 <feature-group-spec name="camunda-subsystem" xmlns="urn:jboss:galleon:feature-group:1.0">
   <feature spec="subsystem.camunda-bpm-platform">
-    <!--
+
     <feature spec="subsystem.camunda-bpm-platform.process-engines">
       <param name="process-engines" value="default"/>
-      <param name="name" value="default"/>
-      <param name="default" value="true"/>
+      <param name="name"            value="default"/>
+      <param name="default"         value="true"/>
+      <param name="datasource"      value="java:jboss/datasources/ProcessEngine"/>
+      <param name="history-level"   value="full"/>
+      <param name="properties"      value="{jobExecutorAcquisitionName=default, isAutoSchemaUpdate=true, authorizationEnabled=true, jobExecutorDeploymentAware=true, historyCleanupBatchWindowStartTime=00:01}"/>
+
+      <feature spec="subsystem.camunda-bpm-platform.process-engines.plugins">
+        <param name="class" value="org.camunda.bpm.application.impl.event.ProcessApplicationEventListenerPlugin"/>
+      </feature>
+      <feature spec="subsystem.camunda-bpm-platform.process-engines.plugins">
+        <param name="class" value="org.camunda.spin.plugin.impl.SpinProcessEnginePlugin"/>
+      </feature>
+      <feature spec="subsystem.camunda-bpm-platform.process-engines.plugins">
+        <param name="class" value="org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin"/>
+      </feature>
     </feature>
-    -->
-    <!--
+
     <feature spec="subsystem.camunda-bpm-platform.job-executor">
       <param name="job-executor" value="default"/>
       <param name="core-threads" value="3"/>
-      <param name="max-threads" value="5"/>
+      <param name="max-threads"  value="5"/>
       <param name="queue-length" value="10"/>
-    </feature>
-    -->
 
+      <feature spec="subsystem.camunda-bpm-platform.job-executor.job-acquisitions">
+        <param name="job-acquisitions" value="default"/>
+        <param name="name"             value="default"/>
+        <param name="properties"       value="{lockTimeInMillis=300000, waitTimeInMillis=5000, maxJobsPerAcquisition=3}"/>
+      </feature>
+    </feature>
   </feature>
 
   <feature spec="subsystem.datasources">
     <feature spec="subsystem.datasources.data-source">
-      <param name="data-source" value="ProcessEngine"/>
-      <param name="enabled" value="true"/>
-      <param name="use-java-context" value="true"/>
-      <param name="jndi-name" value="java:jboss/datasources/ProcessEngine"/>
-      <param name="connection-url" value="&quot;jdbc:h2:./camunda-h2-dbs/process-engine;DB_CLOSE_DELAY=-1;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE&quot;"/>
-      <param name="driver-name" value="h2"/>
-      <param name="user-name" value="sa"/>
-      <param name="password" value="sa"/>
-      <param name="jta" value="true"/>
+      <param name="data-source"           value="ProcessEngine"/>
+      <param name="enabled"               value="true"/>
+      <param name="use-java-context"      value="true"/>
+      <param name="jndi-name"             value="java:jboss/datasources/ProcessEngine"/>
+      <param name="connection-url"        value="&quot;jdbc:h2:./camunda-h2-dbs/process-engine;DB_CLOSE_DELAY=-1;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE&quot;"/>
+      <param name="driver-name"           value="h2"/>
+      <param name="user-name"             value="sa"/>
+      <param name="password"              value="sa"/>
+      <param name="jta"                   value="true"/>
       <param name="transaction-isolation" value="TRANSACTION_READ_COMMITTED" />
     </feature>
   </feature>
