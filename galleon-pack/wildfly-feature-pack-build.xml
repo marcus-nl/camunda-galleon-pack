@@ -51,10 +51,13 @@ If you want to use a Galleon 'universe' (see the Galleon documentation) you coul
     <generate-feature-specs>
         <extensions>
             <standalone>
-                <!-- TODO Use the name of the module implementing your subsystem -->
                 <extension>org.wildfly.extension.template-subsystem</extension>
                 <extension>org.camunda.bpm.wildfly.camunda-wildfly-subsystem</extension>
             </standalone>
+            <domain>
+                <extension>org.wildfly.extension.template-subsystem</extension>
+                <extension>org.camunda.bpm.wildfly.camunda-wildfly-subsystem</extension>
+            </domain>
         </extensions>
     </generate-feature-specs>
 </build>
